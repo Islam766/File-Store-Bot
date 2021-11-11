@@ -70,7 +70,7 @@ async def start(bot, cmd):
 		    f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{BOT_USERNAME} !!"
 		)
 	usr_cmd = cmd.text.split("_")[-1]
-	if usr_cmd == "/start":
+	if usr_cmd == "/islamm":
 		if Config.UPDATES_CHANNEL:
 			invite_link = await bot.create_chat_invite_link(int(Config.UPDATES_CHANNEL))
 			try:

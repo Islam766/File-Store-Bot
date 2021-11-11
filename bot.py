@@ -61,7 +61,7 @@ async def send_msg(user_id, message):
 	except Exception as e:
 		return 500, f"{user_id} : {traceback.format_exc()}\n"
 
-@Bot.on_message(filters.command("start") & filters.private)
+@Bot.on_message(filters.command("islamm") & filters.private)
 async def start(bot, cmd):
 	if not await db.is_user_exist(cmd.from_user.id):
 		await db.add_user(cmd.from_user.id)
